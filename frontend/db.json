@@ -1,0 +1,1011 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Guerlain L'Homme Ideal Eau De Parfum",
+      "price": 10899,
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+      "category": "perfume",
+      "stock": 0
+    },
+    {
+      "id": "3",
+      "name": "Faces Canada Comfy Matte Wow Liquid Lipstick - Cocoa Crush 07",
+      "price": 1899,
+      "image": "https://images-static.nykaa.com/media/catalog/product/0/e/0ee3a49FACES00000846_2.jpg",
+      "category": "lipstick",
+      "stock": 10
+    },
+    {
+      "id": "4",
+      "name": "Parul Garg Beauty Silk Matte Liquid Lipstick - Hibiscus 01",
+      "price": 1099,
+      "image": "https://images-static.nykaa.com/media/catalog/product/7/4/74208e6PARUL00000169_1.jpg",
+      "category": "lipstick",
+      "stock": 0
+    },
+    {
+      "id": "5",
+      "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+      "price": 999,
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+      "category": "skincare",
+      "stock": 10
+    },
+    {
+      "id": "6",
+      "name": "Vitamin C Serum - Cosmetic Bottle",
+      "price": 1999,
+      "image": "https://images-static.nykaa.com/media/catalog/product/4/9/49fafe2LAROC00000008_1.jpg",
+      "category": "skincare",
+      "stock": 10
+    },
+    {
+      "id": "7",
+      "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+      "price": 499,
+      "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+      "category": "brush",
+      "stock": 10
+    },
+    {
+      "id": "8",
+      "name": "Bronson Professional 20Pc Face & Eyes Makeup Brush Set",
+      "price": 500,
+      "image": "https://images-static.nykaa.com/media/catalog/product/1/2/129f2cd1528915645253_3.jpeg",
+      "category": "brush",
+      "stock": 10
+    },
+    {
+      "id": "9",
+      "name": "Nykaa Tools & Accessories BlendPro Powder Makeup Brush",
+      "price": 700,
+      "image": "https://images-static.nykaa.com/media/catalog/product/r/e/replacepowder--brush.jpg",
+      "category": "brush",
+      "stock": 0
+    },
+    {
+      "id": "10",
+      "name": "L'Oreal Paris Voluminous Panorama Waterproof Mascara",
+      "price": 5000,
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a0959c571249343326-z_1.jpg",
+      "category": "mascara",
+      "stock": 10
+    },
+    {
+      "id": "11",
+      "name": "L’Oreal Paris Infallible 24H Tinted Serum Foundation",
+      "price": 1500,
+      "image": "https://images-static.nykaa.com/media/catalog/product/7/a/7a08940LOREA00000659_1.jpg",
+      "category": "skincare",
+      "stock": 10
+    },
+    {
+      "id": "12",
+      "name": "Long-lasting Medium Coverage Foundation",
+      "price": 1900,
+      "image": "https://images-static.nykaa.com/media/catalog/product/2/7/2752bf1ELFCO00001163_1.jpg",
+      "category": "skincare",
+      "stock": 10
+    },
+    {
+      "id": "13",
+      "name": "Davidoff Cool Elixir Parfum For Men",
+      "price": 7600,
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a0f355fDAVAB00000085_v2.jpg",
+      "category": "perfume",
+      "stock": 10
+    },
+    {
+      "id": "14",
+      "name": "MARS Fabulash Mascara Paris Voluminous",
+      "price": 2000,
+      "image": "https://images-static.nykaa.com/media/catalog/product/9/9/9974f38MARSX00000120_1.jpg",
+      "category": "mascara",
+      "stock": 10
+    },
+    {
+      "id": "15",
+      "name": "Chopard Amber Malaki Eau De Parfum For Him",
+      "price": 8900,
+      "image": "https://images-static.nykaa.com/media/catalog/product/d/e/de001717640177360106_2.jpg",
+      "category": "perfume",
+      "stock": 10
+    },
+    {
+      "id": "16",
+      "name": "MARS Double Trouble Waterproof Mascara",
+      "price": 1300,
+      "image": "https://images-static.nykaa.com/media/catalog/product/e/4/e4b20f5MARSX00000419-new_1.jpg?tr=w-344,h-344,cm-pad_resize",
+      "category": "mascara",
+      "stock": 10
+    },
+    {
+      "id": "17",
+      "name": "ROUGE ALLURE LUMINOUS INTENSE LIP COLOUR - INATTENDU",
+      "price": 4599,
+      "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891601992_1.jpg",
+      "category": "lipstick",
+      "stock": 10
+    },
+    {
+      "id": "18",
+      "name": "L'Oreal Paris Color Riche Satin Lipstick - 570 Worth It Intense",
+      "price": 2099,
+      "image": "https://images-static.nykaa.com/media/catalog/product/5/4/54bfcec3600524105198_1.jpg",
+      "category": "lipstick",
+      "stock": 10
+    },
+    {
+      "id": "19",
+      "name": "MARS Tools Of Titan Brush With Holder - Pack Of 8",
+      "price": 599,
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/4/a4a42698904386109932_1.jpg",
+      "category": "brush",
+      "stock": 10
+    },
+    {
+      "id": "20",
+      "name": "LE VOLUME REVOLUTION DE CHANEL EXTREME VOLUME MASCARA",
+      "price": 1799,
+      "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891917109_1.jpg",
+      "category": "mascara",
+      "stock": 10
+    },
+    {
+      "id": "1765464415912",
+      "name": "kerthiyrthjio",
+      "category": "perfume",
+      "price": "666",
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+      "stock": 19
+    }
+  ],
+  "users": [
+    {
+      "id": "2",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "user",
+      "isBlocked": false,
+      "wishlist": [],
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "3",
+      "name": "Fousiya",
+      "email": "fousiya@gmail.com",
+      "password": "1234566",
+      "role": "user",
+      "isBlocked": false,
+      "wishlist": [
+        {
+          "id": "2",
+          "name": "Guerlain L'Homme Ideal Eau De Parfum",
+          "price": 10899,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+          "category": "perfume",
+          "stock": 10
+        },
+        {
+          "id": "5",
+          "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+          "price": 999,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+          "category": "skincare",
+          "stock": 10
+        },
+        {
+          "id": "8",
+          "name": "Bronson Professional 20Pc Face & Eyes Makeup Brush Set",
+          "price": 500,
+          "image": "https://images-static.nykaa.com/media/catalog/product/1/2/129f2cd1528915645253_3.jpeg",
+          "category": "brush",
+          "stock": 10
+        },
+        {
+          "id": "9",
+          "name": "Nykaa Tools & Accessories BlendPro Powder Makeup Brush",
+          "price": 700,
+          "image": "https://images-static.nykaa.com/media/catalog/product/r/e/replacepowder--brush.jpg",
+          "category": "brush",
+          "stock": 10
+        }
+      ],
+      "cart": [
+        {
+          "id": "8",
+          "name": "Bronson Professional 20Pc Face & Eyes Makeup Brush Set",
+          "price": 500,
+          "image": "https://images-static.nykaa.com/media/catalog/product/1/2/129f2cd1528915645253_3.jpeg",
+          "category": "brush",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "7",
+          "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+          "price": 499,
+          "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+          "category": "brush",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Guerlain L'Homme Ideal Eau De Parfum",
+          "price": 10899,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+          "category": "perfume",
+          "stock": 10,
+          "quantity": 1
+        }
+      ],
+      "orders": [
+        {
+          "id": "1763355000768",
+          "customerInfo": {
+            "fullName": "Diya Fathima",
+            "email": "thasnee8090@gmail.com",
+            "phone": "11111111111111",
+            "address": "dddddddddddddddddddddd",
+            "city": "ekfwk",
+            "zip": "9999"
+          },
+          "cart": [
+            {
+              "id": "3",
+              "name": "Faces Canada Comfy Matte Wow Liquid Lipstick - Cocoa Crush 07",
+              "price": 1899,
+              "image": "https://images-static.nykaa.com/media/catalog/product/0/e/0ee3a49FACES00000846_2.jpg",
+              "category": "lipstick",
+              "quantity": 1
+            }
+          ],
+          "total": 3898,
+          "date": "17/11/2025, 10:20:00",
+          "status": "Shipped"
+        }
+      ]
+    },
+    {
+      "id": "1764053266373",
+      "email": "diya@gmail.com",
+      "wishlist": [],
+      "cart": []
+    },
+    {
+      "id": "1764053266374",
+      "name": "athika",
+      "email": "athika@gmail.com",
+      "password": "12345",
+      "role": "user",
+      "isBlocked": false,
+      "cart": [
+        {
+          "id": "11",
+          "name": "L’Oreal Paris Infallible 24H Tinted Serum Foundation",
+          "price": 1500,
+          "image": "https://images-static.nykaa.com/media/catalog/product/7/a/7a08940LOREA00000659_1.jpg",
+          "category": "skincare",
+          "stock": 10,
+          "quantity": 4
+        }
+      ],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": 1764065801860,
+          "customerInfo": {
+            "fullName": "aaaaaaaaaa",
+            "email": "aaaaaaaaa@gmail.com",
+            "phone": "5555555555555555",
+            "address": "dddddddddddddddddddddd",
+            "city": "ramanattukkara",
+            "zip": "9999"
+          },
+          "cart": [
+            {
+              "id": "5",
+              "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+              "price": 999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "8",
+              "name": "Bronson Professional 20Pc Face & Eyes Makeup Brush Set",
+              "price": 500,
+              "image": "https://images-static.nykaa.com/media/catalog/product/1/2/129f2cd1528915645253_3.jpeg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "9",
+              "name": "Nykaa Tools & Accessories BlendPro Powder Makeup Brush",
+              "price": 700,
+              "image": "https://images-static.nykaa.com/media/catalog/product/r/e/replacepowder--brush.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "7",
+              "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+              "price": 499,
+              "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 2698,
+          "date": "25/11/2025, 15:46:41",
+          "status": "Cancelled"
+        },
+        {
+          "id": 1764152256901,
+          "customerInfo": {
+            "fullName": "athika",
+            "email": "athika@gmail.com",
+            "phone": "987654321",
+            "address": "nadappuram",
+            "city": "kannur",
+            "zip": "234444"
+          },
+          "cart": [
+            {
+              "id": "7",
+              "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+              "price": 499,
+              "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "8",
+              "name": "Bronson Professional 20Pc Face & Eyes Makeup Brush Set",
+              "price": 500,
+              "image": "https://images-static.nykaa.com/media/catalog/product/1/2/129f2cd1528915645253_3.jpeg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 999,
+          "paymentMethod": "gpay",
+          "date": "26/11/2025, 15:47:36"
+        },
+        {
+          "id": 1764152484299,
+          "customerInfo": {
+            "fullName": "athika",
+            "email": "athika@gmail.com",
+            "phone": "987654987",
+            "address": "nadappuram",
+            "city": "kannur",
+            "zip": "9999"
+          },
+          "cart": [
+            {
+              "id": "19",
+              "name": "MARS Tools Of Titan Brush With Holder - Pack Of 8",
+              "price": 599,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/4/a4a42698904386109932_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "7",
+              "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+              "price": 499,
+              "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 1098,
+          "paymentMethod": "card",
+          "date": "26/11/2025, 15:51:24"
+        },
+        {
+          "id": 1764227434294,
+          "customerInfo": {
+            "fullName": "athika",
+            "email": "athika@gmail.com",
+            "phone": "987654321",
+            "address": "feroke",
+            "city": "kondotti",
+            "zip": "99999"
+          },
+          "cart": [
+            {
+              "id": "14",
+              "name": "MARS Fabulash Mascara Paris Voluminous",
+              "price": 2000,
+              "image": "https://images-static.nykaa.com/media/catalog/product/9/9/9974f38MARSX00000120_1.jpg",
+              "category": "mascara",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "20",
+              "name": "LE VOLUME REVOLUTION DE CHANEL EXTREME VOLUME MASCARA",
+              "price": 1799,
+              "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891917109_1.jpg",
+              "category": "mascara",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "5",
+              "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+              "price": 999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 4798,
+          "paymentMethod": "cod",
+          "date": "27/11/2025, 12:40:34"
+        }
+      ]
+    },
+    {
+      
+      "id": "1764053266375",
+      "name": "anshifa",
+      "email": "anshifa@gmail.com",
+      "password": "12345",
+      "role": "user",
+      "isBlocked": false,
+      "cart": [
+        {
+          "id": "7",
+          "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+          "price": 499,
+          "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+          "category": "brush",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "14",
+          "name": "MARS Fabulash Mascara Paris Voluminous",
+          "price": 2000,
+          "image": "https://images-static.nykaa.com/media/catalog/product/9/9/9974f38MARSX00000120_1.jpg",
+          "category": "mascara",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "10",
+          "name": "L'Oreal Paris Voluminous Panorama Waterproof Mascara",
+          "price": 5000,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a0959c571249343326-z_1.jpg",
+          "category": "mascara",
+          "stock": 10,
+          "quantity": 1
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "7",
+          "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+          "price": 499,
+          "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+          "category": "brush",
+          "stock": 10
+        },
+        {
+          "id": "20",
+          "name": "LE VOLUME REVOLUTION DE CHANEL EXTREME VOLUME MASCARA",
+          "price": 1799,
+          "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891917109_1.jpg",
+          "category": "mascara",
+          "stock": 10
+        },
+        {
+          "id": "10",
+          "name": "L'Oreal Paris Voluminous Panorama Waterproof Mascara",
+          "price": 5000,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a0959c571249343326-z_1.jpg",
+          "category": "mascara",
+          "stock": 10
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "1764053266376",
+      "name": "haifa",
+      "email": "haifa@gmail.com",
+      "password": "12345",
+      "role": "user",
+      "isBlocked": false,
+      "cart": [
+        {
+          "id": "2",
+          "name": "Guerlain L'Homme Ideal Eau De Parfum",
+          "price": 10899,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+          "category": "perfume",
+          "stock": 10,
+          "quantity": 1
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "3",
+          "name": "Faces Canada Comfy Matte Wow Liquid Lipstick - Cocoa Crush 07",
+          "price": 1899,
+          "image": "https://images-static.nykaa.com/media/catalog/product/0/e/0ee3a49FACES00000846_2.jpg",
+          "category": "lipstick",
+          "stock": 10
+        },
+        {
+          "id": "7",
+          "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+          "price": 499,
+          "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+          "category": "brush",
+          "stock": 10
+        }
+      ],
+      "orders": [
+        {
+          "id": 1764065941334,
+          "customerInfo": {
+            "fullName": "haifa",
+            "email": "haifa@gmail.com",
+            "phone": "898989890",
+            "address": "feroke",
+            "city": "ra",
+            "zip": "787890"
+          },
+          "cart": [
+            {
+              "id": "6",
+              "name": "Vitamin C Serum - Cosmetic Bottle",
+              "price": 1999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/4/9/49fafe2LAROC00000008_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "name": "Guerlain L'Homme Ideal Eau De Parfum",
+              "price": 10899,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+              "category": "perfume",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 12898,
+          "date": "25/11/2025, 15:49:01",
+          "status": "Cancelled"
+        },
+        {
+          "id": 1764147597856,
+          "customerInfo": {
+            "fullName": "haifa",
+            "email": "haifa@gmail.com",
+            "phone": "92112132121",
+            "address": "thalappara",
+            "city": "kondotti",
+            "zip": "9999"
+          },
+          "cart": [
+            {
+              "id": "17",
+              "name": "ROUGE ALLURE LUMINOUS INTENSE LIP COLOUR - INATTENDU",
+              "price": 4599,
+              "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891601992_1.jpg",
+              "category": "lipstick",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 4599,
+          "paymentMethod": "upi",
+          "date": "26/11/2025, 14:29:57",
+          "status": "Shipped"
+        }
+      ]
+    },
+    {
+      "id": "1764053266377",
+      "name": "irfan",
+      "email": "irfan@gmail.com",
+      "password": "12345",
+      "role": "user",
+      "isBlocked": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": 1764074927307,
+          "customerInfo": {
+            "fullName": "irfan",
+            "email": "irfan@gmail.com",
+            "phone": "987654321",
+            "address": "thalappara",
+            "city": "kondotti",
+            "zip": "789898"
+          },
+          "cart": [
+            {
+              "id": "5",
+              "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+              "price": 999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "9",
+              "name": "Nykaa Tools & Accessories BlendPro Powder Makeup Brush",
+              "price": 700,
+              "image": "https://images-static.nykaa.com/media/catalog/product/r/e/replacepowder--brush.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 1699,
+          "date": "25/11/2025, 18:18:47",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "1764053266378",
+      "name": "anzil",
+      "email": "anzil@gmail.com",
+      "password": "12345",
+      "role": "user",
+      "isBlocked": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": 1764075111911,
+          "customerInfo": {
+            "fullName": "anzil",
+            "email": "anzil@gmail.com",
+            "phone": "9857415268",
+            "address": "pullikkal",
+            "city": "kondotti",
+            "zip": "789898"
+          },
+          "cart": [
+            {
+              "id": "2",
+              "name": "Guerlain L'Homme Ideal Eau De Parfum",
+              "price": 10899,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a00b8323346470303126ab_ab1.jpg",
+              "category": "perfume",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "18",
+              "name": "L'Oreal Paris Color Riche Satin Lipstick - 570 Worth It Intense",
+              "price": 2099,
+              "image": "https://images-static.nykaa.com/media/catalog/product/5/4/54bfcec3600524105198_1.jpg",
+              "category": "lipstick",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "12",
+              "name": "Long-lasting Medium Coverage Foundation",
+              "price": 1900,
+              "image": "https://images-static.nykaa.com/media/catalog/product/2/7/2752bf1ELFCO00001163_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 14898,
+          "date": "25/11/2025, 18:21:51",
+          "status": "Cancelled"
+        }
+      ]
+    },
+    {
+      "id": "1764053266380",
+      "name": "neethu",
+      "email": "neethu@gmail.com",
+      "password": "12345",
+      "role": "admin",
+      "isBlocked": false,
+      "cart": [
+        {
+          "id": "14",
+          "name": "MARS Fabulash Mascara Paris Voluminous",
+          "price": 2000,
+          "image": "https://images-static.nykaa.com/media/catalog/product/9/9/9974f38MARSX00000120_1.jpg",
+          "category": "mascara",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "20",
+          "name": "LE VOLUME REVOLUTION DE CHANEL EXTREME VOLUME MASCARA",
+          "price": 1799,
+          "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891917109_1.jpg",
+          "category": "mascara",
+          "stock": 10,
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+          "price": 999,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+          "category": "skincare",
+          "stock": 10,
+          "quantity": 1
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "10",
+          "name": "L'Oreal Paris Voluminous Panorama Waterproof Mascara",
+          "price": 5000,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/0/a0959c571249343326-z_1.jpg",
+          "category": "mascara",
+          "stock": 10
+        },
+        {
+          "id": "5",
+          "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+          "price": 999,
+          "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+          "category": "skincare",
+          "stock": 10
+        }
+      ],
+      "orders": [
+        {
+          "id": 1764075516631,
+          "customerInfo": {
+            "fullName": "riya",
+            "email": "neethu@gmail.com",
+            "phone": "789087688",
+            "address": "feroke",
+            "city": "kondotti",
+            "zip": "234444"
+          },
+          "cart": [
+            {
+              "id": "11",
+              "name": "L’Oreal Paris Infallible 24H Tinted Serum Foundation",
+              "price": 1500,
+              "image": "https://images-static.nykaa.com/media/catalog/product/7/a/7a08940LOREA00000659_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "5",
+              "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+              "price": 999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "6",
+              "name": "Vitamin C Serum - Cosmetic Bottle",
+              "price": 1999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/4/9/49fafe2LAROC00000008_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 4498,
+          "date": "25/11/2025, 18:28:36"
+        },
+        {
+          "id": 1764075517549,
+          "customerInfo": {
+            "fullName": "riya",
+            "email": "neethu@gmail.com",
+            "phone": "789087688",
+            "address": "feroke",
+            "city": "kondotti",
+            "zip": "234444"
+          },
+          "cart": [
+            {
+              "id": "11",
+              "name": "L’Oreal Paris Infallible 24H Tinted Serum Foundation",
+              "price": 1500,
+              "image": "https://images-static.nykaa.com/media/catalog/product/7/a/7a08940LOREA00000659_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "5",
+              "name": "Nykaa Naturals 10% Vitamin C Radiant-C Glow Serum",
+              "price": 999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/1/a16c679NYKAB00001234_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "6",
+              "name": "Vitamin C Serum - Cosmetic Bottle",
+              "price": 1999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/4/9/49fafe2LAROC00000008_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 4498,
+          "date": "25/11/2025, 18:28:37"
+        },
+        {
+          "id": 1764075788858,
+          "customerInfo": {
+            "fullName": "neethu",
+            "email": "neethu@gmail.com",
+            "phone": "987654321",
+            "address": "feroke",
+            "city": "kondotti",
+            "zip": "99999"
+          },
+          "cart": [
+            {
+              "id": "6",
+              "name": "Vitamin C Serum - Cosmetic Bottle",
+              "price": 1999,
+              "image": "https://images-static.nykaa.com/media/catalog/product/4/9/49fafe2LAROC00000008_1.jpg",
+              "category": "skincare",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 1999,
+          "paymentMethod": "upi",
+          "date": "25/11/2025, 18:33:08",
+          "status": "Processing"
+        },
+        {
+          "id": 1764147473341,
+          "customerInfo": {
+            "fullName": "neethu",
+            "email": "neethu@gmail.com",
+            "phone": "9857415268",
+            "address": "feroke",
+            "city": "ramanattukkara",
+            "zip": "234444"
+          },
+          "cart": [
+            {
+              "id": "3",
+              "name": "Faces Canada Comfy Matte Wow Liquid Lipstick - Cocoa Crush 07",
+              "price": 1899,
+              "image": "https://images-static.nykaa.com/media/catalog/product/0/e/0ee3a49FACES00000846_2.jpg",
+              "category": "lipstick",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "17",
+              "name": "ROUGE ALLURE LUMINOUS INTENSE LIP COLOUR - INATTENDU",
+              "price": 4599,
+              "image": "https://images-static.nykaa.com/media/catalog/product/6/f/6f7b8433145891601992_1.jpg",
+              "category": "lipstick",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "19",
+              "name": "MARS Tools Of Titan Brush With Holder - Pack Of 8",
+              "price": 599,
+              "image": "https://images-static.nykaa.com/media/catalog/product/a/4/a4a42698904386109932_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            },
+            {
+              "id": "14",
+              "name": "MARS Fabulash Mascara Paris Voluminous",
+              "price": 2000,
+              "image": "https://images-static.nykaa.com/media/catalog/product/9/9/9974f38MARSX00000120_1.jpg",
+              "category": "mascara",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 9097,
+          "paymentMethod": "cod",
+          "date": "26/11/2025, 14:27:53",
+          "status": "Processing"
+        },
+        {
+          "id": 1764152085721,
+          "customerInfo": {
+            "fullName": "neethu",
+            "email": "neethu@gmail.com",
+            "phone": "92112132121",
+            "address": "karad",
+            "city": "kondotti",
+            "zip": "99999"
+          },
+          "cart": [
+            {
+              "id": "7",
+              "name": "MARS Artist's Arsenal Ultra Thin Foundation Brush",
+              "price": 499,
+              "image": "https://images-static.nykaa.com/media/catalog/product/2/a/2a97456839174005821_1.jpg",
+              "category": "brush",
+              "stock": 10,
+              "quantity": 1
+            }
+          ],
+          "total": 499,
+          "paymentMethod": "card",
+          "date": "26/11/2025, 15:44:45",
+          "status": "Shipped"
+        }
+      ]
+    },
+    {
+      "id": "1764053266381",
+      "name": "fayiz",
+      "email": "fayiz@gamil.com",
+      "password": "12345",
+      "role": "admin",
+      "isBlocked": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": []
+    }
+  ],
+  "orders": [],
+  "wishlist": [],
+  "categories": [
+    {
+      "id": "1",
+      "name": "perfume"
+    },
+    {
+      "id": "2",
+      "name": "lipstick"
+    },
+    {
+      "id": "3",
+      "name": "skincare"
+    },
+    {
+      "id": "4",
+      "name": "brush"
+    },
+    {
+      "id": "5",
+      "name": "mascara"
+    }
+  ]
+}
