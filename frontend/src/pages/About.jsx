@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ShieldCheck, Wand2, Headset } from "lucide-react";
 
 const About = () => {
   return (
@@ -97,42 +98,39 @@ const About = () => {
       {/* ================= FEATURE HIGHLIGHTS SECTION ================= */}
 <div className="bg-gray-50 py-10 mt-20">
   <h1 className="text-4xl font-bold mb-6 text-center text-pink-600">HIGHLIGHTS </h1>
-  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center mt-12 mb-8">
 
-    {/* FREE SHIPPING */}
+    {/* SECURE PAYMENTS */}
     <div className="flex flex-col items-center">
-      <div className="bg-pink-600 p-4 rounded-full">
-        <i className="fas fa-truck text-white text-2xl"></i>
+      <div className="mb-4">
+        <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+          <ShieldCheck className="text-blue-400 w-10 h-10" />
+        </div>
       </div>
-      <h3 className="text-lg font-semibold mt-3">FREE SHIPPING</h3>
-      <p className="text-sm text-gray-600">On Orders Above ₹299</p>
+      <h3 className="text-xl font-medium text-gray-800 mb-2">100% Secure Payments</h3>
+      <p className="text-sm text-gray-500">All major credit & debit cards accepted.</p>
     </div>
 
-    {/* EASY RETURNS */}
+    {/* BEAUTY ASSISTANT */}
     <div className="flex flex-col items-center">
-      <div className="bg-pink-600 p-4 rounded-full">
-        <i className="fas fa-undo text-white text-2xl"></i>
+      <div className="mb-4">
+        <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center">
+          <Wand2 className="text-pink-400 w-10 h-10" />
+        </div>
       </div>
-      <h3 className="text-lg font-semibold mt-3">EASY RETURNS</h3>
-      <p className="text-sm text-gray-600">15-Day Return Policy</p>
+      <h3 className="text-xl font-medium text-gray-800 mb-2">Beauty Assistant</h3>
+      <p className="text-sm text-gray-500 px-4">Tell me what you are looking for and I will work my magic to help you find your perfect match.</p>
     </div>
 
-    {/* 100% AUTHENTIC */}
+    {/* HELP CENTER */}
     <div className="flex flex-col items-center">
-      <div className="bg-pink-600 p-4 rounded-full">
-        <i className="fas fa-award text-white text-2xl"></i>
+      <div className="mb-4">
+        <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center">
+          <Headset className="text-orange-400 w-10 h-10" />
+        </div>
       </div>
-      <h3 className="text-lg font-semibold mt-3">100% AUTHENTIC</h3>
-      <p className="text-sm text-gray-600">Products Sourced Directly</p>
-    </div>
-
-    {/* BRANDS */}
-    <div className="flex flex-col items-center">
-      <div className="bg-pink-600 p-4 rounded-full">
-        <i className="fas fa-bottle-droplet text-white text-2xl"></i>
-      </div>
-      <h3 className="text-lg font-semibold mt-3">1900+ BRANDS</h3>
-      <p className="text-sm text-gray-600">1.2 Lakh+ Products</p>
+      <h3 className="text-xl font-medium text-gray-800 mb-2">Help Center</h3>
+      <p className="text-sm text-gray-500 px-4">Got a question? Look no further. Browse FAQs or submit your query.</p>
     </div>
 
   </div>

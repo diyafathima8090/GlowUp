@@ -25,14 +25,15 @@ export const WishlistProvider = ({ children }) => {
     }
   }, [user]);
 
+  
   // 🔹 Fetch Wishlist from backend when user logs in
   const fetchWishlist = useCallback(async () => {
     if (!user) return;
     try {
       const res = await api.get("/wishlist");
-      const dbWishlist = res.data || [];
-      setWishlist(dbWishlist);
-      localStorage.setItem(`wishlist_${user.id}`, JSON.stringify(dbWishlist));
+      const products = res.data.products || [];
+      setWishlist(products);
+      localStorage.setItem(`wishlist_${user.id}`, JSON.stringify(products));
     } catch (err) {
       console.error("Error loading wishlist:", err);
     }
@@ -52,28 +53,33 @@ export const WishlistProvider = ({ children }) => {
       return;
     }
 
+    const isExisting = wishlist.some(item => (item._id || item.id) === (product._id || product.id));
+
     try {
-      const res = await api.post("/wishlist/toggle", {
-        productId: product._id || product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image
-      });
+      let res;
+      if (isExisting) {
+        // Remove from wishlist
+        res = await api.delete(`/wishlist/${product._id || product.id}`);
+      } else {
+        // Add to wishlist
+        res = await api.post("/wishlist", {
+          productId: product._id || product.id
+        });
+      }
 
-      const updatedWishlist = res.data;
-      const isAdded = updatedWishlist.length > wishlist.length;
-
+      const updatedWishlist = res.data.products || [];
       setWishlist(updatedWishlist);
       localStorage.setItem(`wishlist_${user.id}`, JSON.stringify(updatedWishlist));
 
-      if (isAdded) {
+      if (!isExisting) {
         toast.success(`${product.name} added to wishlist!`);
       } else {
         toast.info(`${product.name} removed from wishlist`);
       }
     } catch (error) {
       console.error("Error toggling wishlist:", error);
-      toast.error("Failed to update wishlist");
+      const errorMessage = error.response?.data?.message || "Failed to update wishlist";
+      toast.error(errorMessage);
     }
   };
 

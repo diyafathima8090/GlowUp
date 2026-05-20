@@ -30,7 +30,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-pink-100 p-6">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-pink-100 pt-28 pb-12 px-6">
       <h2 className="text-4xl font-bold text-pink-600 text-center mb-6">
         🛒 Your Cart
       </h2>
@@ -54,7 +54,7 @@ const Cart = () => {
 
                 <div>
                   <h3 className="text-lg font-semibold">{item.name}</h3>
-                  <p className="text-gray-600">₹{item.price}</p>
+                  <p className="text-gray-600">${item.price}</p>
 
                   {/* Quantity Controller */}
                   <div className="flex items-center gap-3 mt-2">

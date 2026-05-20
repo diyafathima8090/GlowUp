@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -90,9 +89,20 @@ const ProductPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleReset = () => {
+    setSearchInput("");
+    setSearchParams({
+      search: "",
+      category: "all",
+      sort: "none",
+    });
+    setCurrentPage(1);
+    toast.info("Filters reset");
+  };
+
   return (
     <>
-      <div className="p-6 bg-pink-50 min-h-screen">
+      <div className="pt-28 pb-12 px-6 bg-pink-50 min-h-screen">
         <h2 className="text-4xl font-bold mb-6 text-center text-pink-600">
           All Products
         </h2>
@@ -143,6 +153,14 @@ const ProductPage = () => {
             />
             <span className="absolute left-4 top-2.5 text-pink-400">🔎</span>
           </div>
+
+          {/* Reset Button */}
+          <button
+            onClick={handleReset}
+            className="px-6 py-2.5 bg-pink-500 text-white font-semibold rounded-full shadow-md hover:bg-pink-600 transition-all focus:outline-none focus:ring-2 focus:ring-pink-300"
+          >
+            Reset
+          </button>
         </div>
 
         {/* Product Grid */}
@@ -160,9 +178,9 @@ const ProductPage = () => {
                 return (
                   <div
                     key={product._id}
-                    className={`border rounded-2xl shadow-md transition p-5 text-center bg-white relative duration-300 ${product.stock === 0 ? "opacity-50 grayscale" : "hover:-translate-y-1 hover:border-pink-300"
-                      }`}
+                    className={`p-[2px] rounded-2xl transition duration-300 ${product.stock === 0 ? "opacity-50 grayscale" : "hover:-translate-y-1"} bg-gradient-to-br from-pink-400 via-pink-200 to-transparent shadow-md`}
                   >
+                  <div className="rounded-2xl p-5 text-center bg-white relative h-full">
                     {/* Wishlist Button */}
                     <button
                       onClick={() => handleWishlistToggle(product)}
@@ -215,28 +233,19 @@ const ProductPage = () => {
                     )}
 
                     {/* Buttons */}
-                    <div className="mt-4 flex justify-center space-x-3">
+                    <div className="mt-4 flex justify-center">
                       <button
                         onClick={() => handleAddToCart(product)}
                         disabled={product.stock === 0}
-                        className={`text-white px-4 py-2 rounded-lg transition text-sm flex-1 ${product.stock === 0
+                        className={`text-white px-4 py-2 rounded-lg transition text-sm w-full ${product.stock === 0
                           ? "bg-gray-400 cursor-not-allowed"
                           : "bg-pink-500 hover:bg-pink-600"
                           }`}
                       >
                         {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
                       </button>
-
-                      <Link
-                        to={`/products/${product.category}/${product._id}`}
-                        className={`border px-4 py-2 rounded-lg transition text-sm flex-1 ${product.stock === 0
-                          ? "border-gray-400 text-gray-400 cursor-not-allowed"
-                          : "text-pink-600 border-pink-500 hover:bg-pink-100"
-                          }`}
-                      >
-                        View Details
-                      </Link>
                     </div>
+                  </div>
                   </div>
 
                 );

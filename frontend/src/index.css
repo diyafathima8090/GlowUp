@@ -76,6 +76,7 @@ button:focus-visible {
     transform: translateY(30px);
     text-shadow: 0 0 0px #ff66cc;
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -87,11 +88,13 @@ button:focus-visible {
   display: inline-block;
   animation: glowUpTitle 1.3s ease-out forwards;
 }
+
 .about-bg {
   background-image: url("https://www.vecteezy.com/vector-art/4243558-3d-background-products-display-podium-scene-with-green-leaf-geometric-platform-background-vector-3d-render-with-podium-stand-to-show-cosmetic-products-stage-showcase-on-pedestal-display-pink-studio");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* important */
+  background-attachment: fixed;
+  /* important */
   background-repeat: no-repeat;
 }
 

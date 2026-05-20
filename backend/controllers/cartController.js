@@ -9,7 +9,6 @@ exports.getCart = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-
 exports.addToCart = async (req, res) => {
     try {
         const { productId, name, price, image, quantity } = req.body;
@@ -17,14 +16,13 @@ exports.addToCart = async (req, res) => {
 
         if (!user) return res.status(404).json({ message: "User not found" });
 
-        const itemIndex = user.cart.findIndex(item => item._id.toString() === productId);
+        const itemIndex = user.cart.findIndex(item => String(item._id || item.id) === String(productId));
 
         if (itemIndex > -1) {
             user.cart[itemIndex].quantity = (parseInt(user.cart[itemIndex].quantity) || 0) + (parseInt(quantity) || 1);
         } else {
             user.cart.push({ _id: productId, name, price, image, quantity: parseInt(quantity) || 1 });
         }
-
 
         user.markModified("cart");
         await user.save();
@@ -37,7 +35,7 @@ exports.addToCart = async (req, res) => {
 exports.removeFromCart = async (req, res) => {
     try {
         const user = await User.findById(req.user._id);
-        user.cart = user.cart.filter(item => item._id.toString() !== req.params.id);
+        user.cart = user.cart.filter(item => String(item._id || item.id) !== String(req.params.id));
 
         user.markModified("cart");
         await user.save();
@@ -64,4 +62,3 @@ exports.productStatus = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-

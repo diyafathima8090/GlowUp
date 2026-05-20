@@ -21,9 +21,10 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("currentUser");
+    localStorage.removeItem("token");
+    localStorage.removeItem("adminToken");
     setUser(null);
   };
-
   const authValue = React.useMemo(() => ({
     user, login, logout, loading
   }), [user, loading]);
@@ -36,3 +37,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+

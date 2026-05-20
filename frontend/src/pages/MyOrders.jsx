@@ -62,81 +62,116 @@ const MyOrders = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-b from-purple-50 to-purple-100">
-      <h2 className="text-4xl font-bold text-purple-600 text-center mb-6">
-        Orders
-      </h2>
+    <div className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 tracking-tight">
+          My Orders
+        </h2>
 
-      {orders.length === 0 ? (
-        <p className="text-center text-gray-600">No orders yet.</p>
-      ) : (
-        <div className="max-w-5xl mx-auto space-y-6">
-          {orders.map((order) => (
-            <div key={order._id} className="bg-white shadow p-5 rounded-lg">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold text-purple-600">
-                    Order #{order._id}
-                  </h3>
-                  <p className="text-gray-600">{new Date(order.createdAt).toLocaleDateString()}</p>
-                </div>
+        {orders.length === 0 ? (
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 text-center flex flex-col items-center justify-center">
+             <span className="text-5xl mb-4">📦</span>
+             <p className="text-xl font-medium text-gray-700">You haven't placed any orders yet.</p>
+             <p className="text-gray-500 mt-2">Time to treat yourself to some GlowUp products!</p>
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {orders.map((order, index) => {
+              // Creating a clean sequential Order ID based on the array length
+              const orderNumber = String(orders.length - index).padStart(3, '0');
+              const rawStat = order.status || "Pending";
+              
+              // Status Badge Styling Logic
+              let statusClasses = "bg-gray-100 text-gray-700";
+              if (rawStat === "Delivered") statusClasses = "bg-green-100 text-green-700";
+              else if (rawStat === "Shipped") statusClasses = "bg-blue-100 text-blue-700";
+              else if (rawStat === "Processing") statusClasses = "bg-yellow-100 text-yellow-700";
+              else if (rawStat === "Cancelled") statusClasses = "bg-red-100 text-red-700";
+              else if (rawStat === "Pending") statusClasses = "bg-orange-100 text-orange-700";
 
-                {order.status !== "Cancelled" && order.status !== "Delivered" && order.status !== "Shipped" && (
-                  <button
-                    onClick={() => handleCancelOrder(order._id)}
-                    className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-2 rounded shadow transition"
-                  >
-                    Cancel Order
-                  </button>
-                )}
-              </div>
+              return (
+                <div key={order._id} className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                  {/* Order Header / Meta */}
+                  <div className="bg-gray-50 px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="flex flex-wrap items-center gap-x-12 gap-y-4 text-sm">
+                      <div>
+                        <p className="text-gray-500 font-medium mb-1 uppercase tracking-wider text-xs">Order Placed</p>
+                        <p className="font-semibold text-gray-900">{new Date(order.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric'})}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500 font-medium mb-1 uppercase tracking-wider text-xs">Total</p>
+                        <p className="font-semibold text-gray-900">${(order.totalPrice || order.total).toLocaleString('en-IN')}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500 font-medium mb-1 uppercase tracking-wider text-xs">Order No.</p>
+                        <p className="font-semibold text-gray-900">#GLOW-{orderNumber}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col sm:items-end md:items-center gap-3">
+                      <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border border-white/50 ${statusClasses}`}>
+                        {rawStat}
+                      </span>
+                      
+                      {/* Cancel Order Action */}
+                      {rawStat !== "Cancelled" && rawStat !== "Delivered" && rawStat !== "Shipped" && (
+                        <button
+                          onClick={() => handleCancelOrder(order._id)}
+                          className="text-sm font-semibold text-red-500 hover:text-white border border-red-500 hover:bg-red-500 px-4 py-1.5 rounded-lg transition-all shadow-sm"
+                        >
+                          Cancel Order
+                        </button>
+                      )}
+                    </div>
+                  </div>
 
-              <p className="font-semibold mt-2">Total: ${order.totalPrice || order.total}</p>
-
-              <p className="font-semibold mt-1">
-                Status:{" "}
-                <span
-                  className={
-                    order.status === "Delivered"
-                      ? "text-green-600 font-bold"
-                      : order.status === "Shipped"
-                        ? "text-blue-600 font-bold"
-                        : order.status === "Processing"
-                          ? "text-yellow-600 font-bold"
-                          : order.status === "Cancelled"
-                            ? "text-red-600 font-bold"
-                            : "text-purple-600 font-bold"
-                  }
-                >
-                  {order.status || "Pending"}
-                </span>
-              </p>
-
-              <h4 className="mt-4 font-bold">Items:</h4>
-
-              {order.cart?.map((item) => (
-                <div
-                  key={item._id || item.id}
-                  className="flex items-center justify-between border-b py-2"
-                >
-                  <div className="flex items-center space-x-3">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-16 h-16 object-cover rounded"
-                    />
-                    <div>
-                      <p className="font-medium">{item.name}</p>
-                      <p>${item.price}</p>
-                      <p>Qty: {item.quantity}</p>
+                  {/* Order Body / Items List */}
+                  <div className="p-6">
+                    <h4 className="font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2 flex items-center gap-2">
+                       <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                       Order Items
+                    </h4>
+                    
+                    <div className="space-y-4">
+                      {(order.items || order.cart)?.map((item, idx) => (
+                        <div
+                          key={item._id || item.id || idx}
+                          className="flex items-center gap-4 bg-gray-50/50 p-4 rounded-xl border border-gray-100 group hover:bg-pink-50/30 transition-colors"
+                        >
+                          {/* Item Image */}
+                          <div className="w-20 h-20 flex-shrink-0 bg-white rounded-lg p-1 border border-gray-200 overflow-hidden shadow-sm">
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="w-full h-full object-cover rounded mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                            />
+                          </div>
+                          
+                          {/* Item Details */}
+                          <div className="flex-1 min-w-0">
+                            <p className="font-bold text-gray-900 truncate text-lg pr-4">{item.name}</p>
+                            <div className="flex items-center gap-3 mt-2 text-sm text-gray-600">
+                              <span className="bg-white px-2.5 py-1 rounded-md border border-gray-200 font-medium text-gray-700 shadow-sm flex items-center gap-1">
+                                Qty: <span className="font-bold">{item.quantity}</span>
+                              </span>
+                              <span className="font-medium text-gray-500">${item.price} each</span>
+                            </div>
+                          </div>
+                          
+                          {/* Item Price */}
+                          <div className="text-right pl-4">
+                             <p className="font-black text-pink-600 text-xl">${(item.price * item.quantity).toLocaleString('en-IN')}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      )}
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -9,6 +9,7 @@ const productRoute = require("./routes/productRoute");
 const cartRoute = require("./routes/cartRoute");
 const orderRouter = require("./routes/orderRouter");
 const wishlistRoute = require("./routes/wishlistRoute");
+const adminRoutes = require("./routes/adminRoutes");
 
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
@@ -23,14 +24,14 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
-
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoute);
 app.use("/api/cart", cartRoute);
 app.use("/api/orders", orderRouter);
 app.use("/api/wishlist", wishlistRoute);
+app.use("/api/admin", adminRoutes);
 
-app.use(notFound);
+app.use(notFound); 
 app.use(errorHandler);
 
 app.get("/", (req, res) => {

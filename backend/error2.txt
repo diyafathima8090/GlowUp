@@ -1,0 +1,57 @@
+﻿[dotenv@17.2.3] injecting env (3) from .env -- tip: ≡ƒ¢á∩╕Å  run anywhere with `dotenvx run -- yourcommand`
+node : C:\Users\thasn\OneDrive\
+Desktop\PROJECT\backend\node_mo
+dules\router\lib\route.js:228
+At line:1 char:1
++ node server.js 2>&1 | 
+Out-File -FilePath error2.txt 
+-Encoding utf8
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          :  
+   NotSpecified: (C:\Users\th  
+  asn\...ib\route.js:228:Str   
+ ing) [], RemoteException
+    + FullyQualifiedErrorId :  
+   NativeCommandError
+ 
+        throw new 
+TypeError('argument handler 
+must be a function')
+        ^
+
+TypeError: argument handler 
+must be a function
+    at Route.<computed> [as 
+get] (C:\Users\thasn\OneDrive\D
+esktop\PROJECT\backend\node_mod
+ules\router\lib\route.js:228:15
+)
+    at Router.<computed> [as 
+get] (C:\Users\thasn\OneDrive\D
+esktop\PROJECT\backend\node_mod
+ules\router\index.js:448:19)
+    at Object.<anonymous> (C:\U
+sers\thasn\OneDrive\Desktop\PRO
+JECT\backend\routes\productRout
+e.js:43:8)
+    at Module._compile (node:in
+ternal/modules/cjs/loader:1688:
+14)
+    at Object..js (node:interna
+l/modules/cjs/loader:1820:10)
+    at Module.load (node:intern
+al/modules/cjs/loader:1423:32)
+    at Function._load (node:int
+ernal/modules/cjs/loader:1246:1
+2)
+    at 
+TracingChannel.traceSync (node:
+diagnostics_channel:322:14)
+    at wrapModuleLoad (node:int
+ernal/modules/cjs/loader:235:24
+)
+    at Module.require (node:int
+ernal/modules/cjs/loader:1445:1
+2)
+
+Node.js v22.18.0

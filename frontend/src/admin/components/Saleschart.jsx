@@ -1,22 +1,22 @@
 import React from 'react';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer 
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell
 } from 'recharts';
 
-// Custom Tooltip
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="p-2 bg-[#2a1336] border border-pink-500 rounded-lg shadow-lg">
-        <p className="font-bold text-pink-300">{label}</p>
-        <p className="text-sm text-white">
-          Revenue: <span className="font-semibold">₹{payload[0].value.toLocaleString('en-IN')}</span>
+      <div className="bg-[#0a050d]/80 border border-white/10 backdrop-blur-xl p-4 rounded-2xl shadow-2xl">
+        <p className="text-[10px] font-black text-pink-500 uppercase tracking-widest mb-1">{label}</p>
+        <p className="text-lg font-black text-white italic">
+          ₹{payload[0].value.toLocaleString('en-IN')}
         </p>
       </div>
     );
@@ -26,41 +26,54 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const SalesChart = ({ data }) => {
   return (
-    <div className="w-full h-[300px] sm:h-[350px] lg:h-[400px]">
+    <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
-          margin={{ top: 10, right: 20, left: 10, bottom: 50 }} // Extra bottom for X-axis labels
-          barSize={20}
+          margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
+          barSize={32}
         >
-          <CartesianGrid stroke="#333" strokeDasharray="3 3" />
-          
-          {/* X-Axis */}
-          <XAxis 
+          <defs>
+            <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ec4899" stopOpacity={0.8} />
+              <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.3} />
+            </linearGradient>
+          </defs>
+
+          <CartesianGrid strokeDasharray="3 3" stroke="#ffffff05" vertical={false} />
+
+          <XAxis
             dataKey="category"
-            stroke="#fff"
-            tick={{ fill: '#ffc1e3', fontSize: 12 }}
-            angle={-15} // Tilt labels
-            textAnchor="end"
-            interval={0} // Show all labels
+            stroke="#ffffff20"
+            tick={{ fill: '#94a3b8', fontSize: 9, fontWeight: 800 }}
+            axisLine={false}
+            tickLine={false}
+            dy={10}
+            textAnchor="middle"
+            interval={0}
+            tickFormatter={(val) => val.toUpperCase()}
           />
 
-          {/* Y-Axis */}
-          <YAxis 
-            stroke="#5e587bff"
-            tick={{ fill: '#ffc1e3', fontSize: 12 }}
-            tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}k`} 
+          <YAxis
+            stroke="#ffffff20"
+            tick={{ fill: '#94a3b8', fontSize: 9, fontWeight: 800 }}
+            axisLine={false}
+            tickLine={false}
+            tickFormatter={(value) => `₹${value >= 1000 ? (value / 1000).toFixed(0) + 'K' : value}`}
           />
 
-          {/* Tooltip */}
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: 'white', fillOpacity: 0.03 }} />
 
-          {/* Bars */}
-          <Bar 
-            dataKey="revenue" 
-            fill="#ff69b4" 
-            radius={[5, 5, 0, 0]} 
-          />
+          <Bar
+            dataKey="revenue"
+            radius={[8, 8, 8, 8]}
+            animationDuration={2000}
+            animationEasing="ease-in-out"
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill="url(#barGradient)" />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>

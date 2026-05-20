@@ -3,17 +3,15 @@ import { NavLink } from "react-router-dom";
 import { Menu, X, LayoutDashboard, Package, ShoppingCart, Users } from "lucide-react";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(false);  // Mobile toggle
-  const [mounted, setMounted] = useState(false); // For entrance animation
+  const [open, setOpen] = useState(false);  
+  const [mounted, setMounted] = useState(false); 
 
   useEffect(() => {
-    // Trigger entrance animation after mount
     setMounted(true);
   }, []);
 
   return (
     <>
-      {/* MOBILE TOP BAR */}
       <div className="md:hidden flex justify-between items-center p-4 shadow">
         <h2 className="text-xl font-bold text-pink-400">GlowUp Admin</h2>
         <button
@@ -24,16 +22,14 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* SIDEBAR */}
       <div
         className={`
           fixed md:static top-0 left-0 min-h-screen w-64 shadow-xl p-6 z-50
           overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800
            text-gray-300
-          transform transition-transform duration-700 ease-out
-          ${mounted ? "translate-x-0" : "-translate-x-full"}  /* Entrance animation */
-          md:translate-x-0  /* Sidebar always visible on desktop */
-          ${open ? "translate-x-0" : ""}  /* Mobile toggle */
+          transform transition-transform duration-300 ease-in-out
+          ${open ? "translate-x-0" : "-translate-x-full"} 
+          md:translate-x-0
         `}
       >
         <h2 className="text-2xl font-bold text-pink-400 mb-10 hidden md:block">
@@ -104,9 +100,9 @@ const Sidebar = () => {
 
           <button
             onClick={() => {
-              localStorage.removeItem("token");
+              localStorage.removeItem("adminToken");
               localStorage.removeItem("currentAdmin");
-              window.location.href = "/admin/login";
+              window.location.href = "/login";
             }}
             className="flex items-center gap-3 p-3 rounded-lg font-medium transition-all w-full text-left
               hover:bg-red-700/20 hover:text-red-400 border border-transparent hover:border-red-600/40 mt-10"

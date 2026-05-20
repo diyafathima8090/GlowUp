@@ -1,28 +1,30 @@
 const User = require("../models/user");
 const Product = require("../models/product");
+const Order = require("../models/order");
 
 exports.createOrder = async (req, res) => {
     try {
         const { cart, totalPrice, shippingAddress, paymentMethod } = req.body;
-        const user = await User.findById(req.user._id);
-
-        if (!user) return res.status(404).json({ message: "User not found" });
-
-        const newOrder = {
-            _id: new Date().getTime().toString(),
-            cart,
-            totalPrice,
+        
+        const order = new Order({
+            user: req.user._id,
+            items: cart,
+            totalPrice: totalPrice,
             shippingAddress,
             paymentMethod,
-            status: "Pending",
-            createdAt: new Date()
-        };
+            status: "Pending"
+        });
 
-        user.orders.push(newOrder);
-        user.cart = [];
-        await user.save();
+        await order.save();
 
-        res.status(201).json(newOrder);
+        const user = await User.findById(req.user._id);
+        if (user) {
+            user.cart = [];
+            // Assuming pushing to user.orders is no longer needed, otherwise we would do user.orders.push(order._id)
+            await user.save();
+        }
+
+        res.status(201).json(order);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -30,8 +32,8 @@ exports.createOrder = async (req, res) => {
 
 exports.getMyOrders = async (req, res) => {
     try {
-        const user = await User.findById(req.user._id);
-        res.json(user.orders || []);
+        const orders = await Order.find({ user: req.user._id }).sort({ createdAt: -1 });
+        res.json(orders || []);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -40,11 +42,7 @@ exports.getMyOrders = async (req, res) => {
 exports.cancelOrder = async (req, res) => {
     try {
         const { orderId } = req.params;
-        const user = await User.findById(req.user._id);
-
-        if (!user) return res.status(404).json({ message: "User not found" });
-
-        const order = user.orders.find(o => o._id === orderId);
+        const order = await Order.findById(orderId);
 
         if (!order) {
             return res.status(404).json({ message: "Order not found" });
@@ -59,12 +57,10 @@ exports.cancelOrder = async (req, res) => {
         }
 
         order.status = "Cancelled";
-        user.markModified("orders"); 
-        await user.save();
+        await order.save();
 
         res.json({ message: "Order cancelled successfully", order });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
-

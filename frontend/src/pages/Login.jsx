@@ -21,27 +21,30 @@ const Login = () => {
     }
 
     try {
-      const response = await api.post("/users/login", {
-        email,
-        password
-      });
-
+      const response = await api.post("/users/login", { email, password });
       const { user, token } = response.data;
 
-      // Save auth data
-      localStorage.setItem("token", token);
-      localStorage.setItem("currentUser", JSON.stringify(user));
-
-      login(user);
-
-      toast.success(`Welcome back, ${user.name || user.email}!`);
-
-      navigate("/");
+      if (user.role === "admin") {
+        // ── Admin flow ───────────────────────────────────────────
+        localStorage.setItem("adminToken", token);
+        localStorage.setItem("currentAdmin", JSON.stringify(user));
+        toast.success(`Welcome Admin, ${user.name || user.email}! 🎉`);
+        navigate("/admin");
+      } else {
+        // ── Regular user flow ────────────────────────────────────
+        localStorage.setItem("token", token);
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        login(user);
+        toast.success(`Welcome back, ${user.name || user.email}!`);
+        navigate("/");
+      }
     } catch (error) {
       console.error("Login failed:", error.response?.data || error.message);
       toast.error(error.response?.data?.message || "Invalid credentials. Please try again.");
     }
   };
+1
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-pink-50">

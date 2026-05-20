@@ -2,9 +2,11 @@ import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedAdminRoute = () => {
-  const admin = JSON.parse(localStorage.getItem("currentAdmin"));
-  if (!admin || admin.role !== "admin") {
-    return <Navigate to="/admin-login" replace />;
+  const token = localStorage.getItem("adminToken");
+  const admin = JSON.parse(localStorage.getItem("currentAdmin") || "null");
+
+  if (!token || !admin || admin.role !== "admin") {
+    return <Navigate to="/login" replace />;
   }
   return <Outlet />;
 };

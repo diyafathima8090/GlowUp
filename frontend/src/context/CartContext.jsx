@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     if (user) {
       const savedCart = localStorage.getItem(`cart_${user.id}`);
-      if (savedCart) {
+      if (savedCart){
         try {
           setCart(JSON.parse(savedCart));
         } catch (err) {

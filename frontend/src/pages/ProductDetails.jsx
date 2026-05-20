@@ -66,116 +66,149 @@ const ProductDetails = () => {
 
 
   return (
-    <div className="bg-pink-50 min-h-screen flex flex-col items-center">
-      {/* 🔹 Product Info Section */}
-      <div className="p-8 flex flex-col lg:flex-row gap-12 justify-center items-start w-full max-w-6xl">
-        {/* Left: Product Image */}
-        <div className="flex flex-col items-center lg:w-1/2">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-[550px] h-[550px] object-cover rounded-2xl shadow-lg"
-          />
-        </div>
-
-        {/* Right: Product Info */}
-        <div className="lg:w-3/4 bg-white p-8 rounded-2xl shadow-md">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">
-            {product.name}
-          </h1>
-          <p className="text-green-600 font-medium mb-1">⭐ 4.2 (250 Ratings)</p>
-
-          <p className="text-2xl font-semibold text-pink-600 mb-4">
-            ${product.price}{" "}
-            <span className="text-gray-400 text-lg line-through ml-2">
-              ${Math.round(product.price * 1.2)}
-            </span>{" "}
-            <span className="text-green-500 text-sm">20% OFF</span>
-          </p>
-
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            {product.description ||
-              "This high-quality skincare and beauty product ensures smooth application, long-lasting effect, and premium ingredients for your best look ever!"}
-          </p>
-
-          {/* Quantity Section */}
-          <div className="flex items-center gap-4 mb-6">
-            <span className="text-gray-700 font-medium">Quantity:</span>
-
-            <div className="flex items-center border rounded-full overflow-hidden">
-              <button
-                onClick={decreaseQty}
-                className="px-4 py-2 text-lg bg-gray-100 hover:bg-gray-200"
-              >
-                −
-              </button>
-
-              <span className="px-6 py-2 text-lg font-semibold">
-                {quantity}
-              </span>
-
-              <button
-                onClick={increaseQty}
-                className="px-4 py-2 text-lg bg-gray-100 hover:bg-gray-200"
-              >
-                +
-              </button>
+    <div className="pt-28 pb-20 bg-gray-50 min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Top Product Section */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 p-6 md:p-12">
+            
+            {/* Left: Product Image */}
+            <div className="flex justify-center items-center bg-gray-50/50 rounded-2xl p-8 border border-gray-100">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full max-w-[450px] object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 ease-in-out"
+              />
             </div>
-          </div>
 
-
-          {/* Buttons */}
-          <div className="flex gap-4">
-            <button
-              onClick={handleAddToCart}
-              className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full shadow-md transition"
-            >
-              🛒 Add to Cart
-            </button>
-
-            <button
-              onClick={handleBuyNow}
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-full shadow-md transition"
-            >
-              💳 Buy Now
-            </button>
-          </div>
-          <div className="w-full max-w-6xl mt-12 bg-white rounded-2xl shadow-md p-8 mb-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-              📝 Customer Reviews
-            </h2>
-
-            <div className="space-y-6">
-              {/* Review 1 */}
-              <div className="border-b border-gray-200 pb-4">
-                <p className="text-yellow-500 text-lg">⭐️⭐️⭐️⭐️⭐️</p>
-                <p className="text-gray-700 mt-1">
-                  “Absolutely love this product! The fragrance lasts all day and
-                  feels so luxurious.”
-                </p>
-                <p className="text-sm text-gray-500 mt-1">– Aisha K.</p>
+            {/* Right: Product Info */}
+            <div className="flex flex-col justify-center">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                {product.name}
+              </h1>
+              
+              <div className="flex items-center gap-4 mb-6">
+                <span className="flex items-center text-yellow-400 text-lg">
+                  ★★★★<span className="text-gray-300">★</span>
+                </span>
+                <span className="text-sm font-medium text-gray-500 underline decoration-gray-300 cursor-pointer hover:text-pink-600 transition">
+                  250 Reviews
+                </span>
               </div>
 
-              {/* Review 2 */}
-              <div className="border-b border-gray-200 pb-4">
-                <p className="text-yellow-500 text-lg">⭐️⭐️⭐️⭐️☆</p>
-                <p className="text-gray-700 mt-1">
-                  “Good product, nice packaging. Would definitely buy again.”
-                </p>
-                <p className="text-sm text-gray-500 mt-1">– Priya S.</p>
+              <div className="flex items-end gap-3 mb-8 pb-8 border-b border-gray-100">
+                <span className="text-4xl font-black text-pink-600">${product.price}</span>
+                <span className="text-xl font-medium text-gray-400 line-through mb-1">${Math.round(product.price * 1.2)}</span>
+                <span className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-full mb-2 ml-2 tracking-wide uppercase">20% Off</span>
               </div>
 
-              {/* Review 3 */}
-              <div>
-                <p className="text-yellow-500 text-lg">⭐️⭐️⭐️⭐️⭐️</p>
-                <p className="text-gray-700 mt-1">
-                  “The best perfume I’ve ever used! Worth every rupee.”
+              <div className="prose prose-sm sm:prose text-gray-600 mb-8 leading-relaxed">
+                <p>
+                  {product.description || "This high-quality skincare and beauty product ensures smooth application, long-lasting effect, and premium ingredients for your best look ever!"}
                 </p>
-                <p className="text-sm text-gray-500 mt-1">– Meera T.</p>
               </div>
+
+              {/* Quantity Section */}
+              <div className="flex items-center gap-6 mb-10">
+                <span className="text-gray-900 font-semibold uppercase tracking-wider text-sm">Quantity</span>
+                <div className="flex items-center border-2 border-gray-200 rounded-lg bg-white overflow-hidden w-36 h-12">
+                  <button
+                    onClick={decreaseQty}
+                    className="flex-1 h-full text-gray-500 hover:text-pink-600 hover:bg-pink-50 transition-colors flex items-center justify-center text-lg font-bold bg-gray-50"
+                  >
+                    −
+                  </button>
+                  <span className="flex-1 h-full flex items-center justify-center text-gray-900 font-bold border-x border-gray-200">
+                    {quantity}
+                  </span>
+                  <button
+                    onClick={increaseQty}
+                    className="flex-1 h-full text-gray-500 hover:text-pink-600 hover:bg-pink-50 transition-colors flex items-center justify-center text-lg font-bold bg-gray-50"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <button
+                  onClick={handleAddToCart}
+                  className="w-full bg-white text-pink-600 border-2 border-pink-500 hover:bg-pink-50 hover:border-pink-600 font-bold py-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                  Add to Cart
+                </button>
+
+                <button
+                  onClick={handleBuyNow}
+                  className="w-full bg-pink-600 text-white font-bold py-4 rounded-xl shadow-md hover:bg-pink-700 hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  Buy Now
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
+
+        {/* Customer Reviews Section */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 border-b border-gray-100 pb-4">
+            Customer Reviews
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Review 1 */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-3 text-sm">
+                 ★★★★★
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Luxurious Feel</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                "Absolutely love this product! The fragrance lasts all day and
+                feels so luxurious. It easily became a staple in my daily routine."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-pink-200 text-pink-700 flex items-center justify-center font-bold text-sm">AK</div>
+                <p className="text-sm font-medium text-gray-900">Aisha K.</p>
+              </div>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-3 text-sm">
+                 ★★★★<span className="text-gray-300">★</span>
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Great Packaging</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+               "Good product, really nice secure packaging. Delivery was extremely fast. Would definitely buy again once this runs out."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-blue-200 text-blue-700 flex items-center justify-center font-bold text-sm">PS</div>
+                <p className="text-sm font-medium text-gray-900">Priya S.</p>
+              </div>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-3 text-sm">
+                 ★★★★★
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Worth Every Rupee</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                "The best item I’ve ever used! You get what you pay for. The quality here is strictly top-notch compared to generic brands."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-purple-200 text-purple-700 flex items-center justify-center font-bold text-sm">MT</div>
+                <p className="text-sm font-medium text-gray-900">Meera T.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

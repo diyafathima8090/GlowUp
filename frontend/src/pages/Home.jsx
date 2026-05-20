@@ -37,6 +37,69 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ===== Category Offers Section ===== */}
+      <section className="py-16 px-6 sm:px-8 max-w-7xl mx-auto w-full">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+          Exclusive Offers
+        </h2>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card 1 */}
+          <div className="flex flex-col items-center">
+            <Link to="/products?category=perfume" className="w-full relative group overflow-hidden rounded-xl shadow-md h-80 block">
+              <img src="https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Perfume" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+              <h3 className="absolute bottom-6 left-0 right-0 text-center text-white text-3xl font-bold tracking-wider drop-shadow-md">
+                PERFUMES
+              </h3>
+            </Link>
+            <p className="mt-4 text-xl font-bold text-gray-800">Up to 40% off</p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-center">
+            <Link to="/products?category=lipstick" className="w-full relative group overflow-hidden rounded-xl shadow-md h-80 block">
+              <img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lipstick" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+              <h3 className="absolute bottom-6 left-0 right-0 text-center text-white text-3xl font-bold tracking-wider drop-shadow-md">
+                LIPSTICKS
+              </h3>
+            </Link>
+            <p className="mt-4 text-xl font-bold text-gray-800">Up to 50% off</p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-center">
+            <Link to="/products?category=skincare" className="w-full relative group overflow-hidden rounded-xl shadow-md h-80 block">
+              <img src="https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Skincare" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+              <h3 className="absolute bottom-6 left-0 right-0 text-center text-white text-3xl font-bold tracking-wider drop-shadow-md">
+                SKINCARE
+              </h3>
+            </Link>
+            <p className="mt-4 text-xl font-bold text-gray-800">Up to 30% off</p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="flex flex-col items-center">
+            <Link to="/products?category=brush" className="w-full relative group overflow-hidden rounded-xl shadow-md h-80 block">
+              <img src="https://images.pexels.com/photos/3373746/pexels-photo-3373746.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Brushes" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+              <h3 className="absolute bottom-6 left-0 right-0 text-center text-white text-3xl font-bold tracking-wider drop-shadow-md">
+                BRUSHES
+              </h3>
+            </Link>
+            <p className="mt-4 text-xl font-bold text-gray-800">Up to 60% off</p>
+          </div>
+        </div>
+        
+        <div className="mt-10 text-center">
+          <Link to="/products" className="inline-block bg-pink-600 text-white w-full sm:w-auto px-12 py-3 rounded text-lg font-semibold hover:bg-pink-700 transition">
+            Shop All <span className="ml-2">›</span>
+          </Link>
+        </div>
+      </section>
+
       {/* ===== Footer Section ===== */}
       <footer className="bg-pink-600 text-white py-10 sm:py-12 mt-auto">
         <div className="max-w-6xl mx-auto px-6 grid gap-10 sm:gap-8 md:grid-cols-3 text-center md:text-left">

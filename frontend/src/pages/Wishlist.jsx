@@ -26,7 +26,7 @@ const Wishlist = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-b from-pink-50 to-pink-100">
+    <div className="min-h-screen pt-28 pb-12 px-6 bg-gradient-to-b from-pink-50 to-pink-100">
       <h2 className="text-4xl font-bold text-pink-600 mb-8 text-center">
         Wishlist
       </h2>

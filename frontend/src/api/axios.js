@@ -4,9 +4,18 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api"
 });
 
-// Attach token automatically
+// Attach token automatically - prioritize adminToken for admin routes, userToken for others
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
+  const adminToken = localStorage.getItem("adminToken");
+  const userToken = localStorage.getItem("token");
+  
+  let token = null;
+  if (config.url && config.url.includes("/admin")) {
+      token = adminToken || userToken;
+  } else {
+      token = userToken || adminToken; // Prefer userToken for non-admin endpoints
+  }
+
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -14,3 +23,5 @@ api.interceptors.request.use((config) => {
 });
 
 export default api;
+
+

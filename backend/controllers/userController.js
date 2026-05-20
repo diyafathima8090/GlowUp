@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // REGISTER USER
-exports.register = async (req, res) => {
+exports. register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     const normalizedEmail = email.toLowerCase().trim();
@@ -58,6 +58,7 @@ exports.login = async (req, res) => {
         id: user._id,
         name: user.name,
         email: user.email,
+        role: user.role,
       }
     });
   } catch (error) {
@@ -85,3 +86,11 @@ exports.updateUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// exports.productstatus = async (req,res)=>{
+//   try{
+//     const product =await product.aggregate([$group:{id:null},totalprice:{$price}])
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// }
