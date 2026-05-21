@@ -35,11 +35,27 @@ app.use("/api/orders", orderRouter);
 app.use("/api/wishlist", wishlistRoute);
 app.use("/api/admin", adminRoutes);
 
-app.use(notFound); 
+// 2. Add your base route right here! (BEFORE the error handlers)
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "GlowUp Backend API is running successfully!"
+  });
+});
+
+// 3. Catch-all fallback error handlers must be at the very bottom
+app.use(notFound);
 app.use(errorHandler);
 
+// app.get("/", (req, res) => {
+//    res.send("Backend API running 🚀");
+// });
+// Add this near your other routes
 app.get("/", (req, res) => {
-   res.send("Backend API running 🚀");
+  res.status(200).json({
+    status: "success",
+    message: "GlowUp Backend API is running successfully!"
+  });
 });
 
 const PORT = process.env.PORT || 5000;
